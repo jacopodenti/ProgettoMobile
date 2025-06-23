@@ -1,0 +1,110 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Nome e Cognome -->
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cognome"
+            android:inputType="textPersonName" />
+
+        <!-- Nome sulla carta -->
+        <EditText
+            android:id="@+id/etCardFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome completo sulla carta"
+            android:inputType="textPersonName" />
+
+        <!-- Numero della carta -->
+        <EditText
+            android:id="@+id/etCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero carta (16 cifre)"
+            android:inputType="number"
+            android:maxLength="16" />
+
+        <!-- Data di scadenza -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etExpireMonth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="MM"
+                android:inputType="number"
+                android:maxLength="2" />
+
+            <EditText
+                android:id="@+id/etExpireYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="AAAA"
+                android:inputType="number"
+                android:maxLength="4" />
+        </LinearLayout>
+
+        <!-- CVV -->
+        <EditText
+            android:id="@+id/etCardCVV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CVV (3 cifre)"
+            android:inputType="numberPassword"
+            android:maxLength="3" />
+
+        <!-- Salva -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salva" />
+
+        <TextView
+            android:id="@+id/tvLastOrderStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stato ordine: --"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvLastOrderLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Posizione consegna: --"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvLastOrderDeliveryTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consegna prevista: --"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
